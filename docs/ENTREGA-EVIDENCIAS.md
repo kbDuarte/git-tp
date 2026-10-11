@@ -1,31 +1,34 @@
 # Gestão de Código-Fonte — Documento de evidências
 
-**Aluno A:** [preencher nome completo]  
-**Aluno B:** [preencher nome completo]  
-**Repositório:** https://github.com/kbDuarte/git-tp  
+**Aluno A:** Kauan Borges Duarte  
+**Aluno B:** Milla (GitHub: [@milla444](https://github.com/milla444))  
+**Repositório de trabalho:** https://github.com/kbDuarte/git-tp  
+**Roteiro do laboratório:** https://github.com/EngenhariaSoftwareAtual/gestao-codigo-fonte  
 **Disciplina:** Engenharia de Software
 
-> Substitua cada indicação entre colchetes pela captura real da etapa. Não inclua imagens de exemplo como se fossem evidências. As capturas devem ser legíveis e mostrar o usuário conectado e a data/hora do sistema.
+> Substitua cada espaço reservado pela captura real da etapa. Não use imagens simuladas como se fossem evidências. As capturas devem ser legíveis e mostrar o usuário conectado e a data/hora do sistema, conforme o roteiro do docente.
 
 ---
 
 ## Evidência 1 — Fork do repositório (Aluno A)
 
-**O que comprova:** página inicial do fork com o aviso “forked from…”.
+**O que comprova:** página inicial do fork mostrando “forked from…”.
 
 [INSERIR CAPTURA REAL 01]
 
 ## Evidência 2 — Colaborador convidado (Aluno A)
 
-**O que comprova:** Settings → Collaborators com o Aluno B listado.
+**O que comprova:** Settings → Collaborators com a conta @milla444 listada.
 
 [INSERIR CAPTURA REAL 02]
 
 ## Evidência 3 — Clone e remoto (ambos)
 
-**O que comprova:** execução de `git clone` e saída de `git remote -v`.
+**O que comprova:** terminal com a execução de `git clone` e a saída de `git remote -v`.
 
-[INSERIR CAPTURA REAL 03]
+[INSERIR CAPTURA REAL 03 — KAUAN]
+
+[INSERIR CAPTURA REAL 03 — MILLA]
 
 ## Evidência 4 — Primeiro commit (Aluno A)
 
@@ -41,7 +44,7 @@
 
 ## Evidência 6 — Push concluído (Aluno B)
 
-**O que comprova:** saída do `git push` bem-sucedido do passo 3.7 do roteiro.
+**O que comprova:** saída do `git push` bem-sucedido do passo correspondente do roteiro.
 
 [INSERIR CAPTURA REAL 06]
 
@@ -65,39 +68,43 @@
 
 ## Evidência 9 — Branches no GitHub (ambos)
 
-**O que comprova:** tela Branches com as três branches previstas no roteiro.
+**O que comprova:** tela Branches mostrando as três branches previstas no roteiro.
 
 [INSERIR CAPTURA REAL 09]
 
 ## Evidência 10 — Pull Request revisado e integrado (Aluno A)
 
-**O que comprova:** PR marcado como Merged, comentário e aprovação reais do Aluno B.
+**O que comprova:** PR marcado como Merged, com comentário e aprovação reais de @milla444.
 
 [INSERIR CAPTURA REAL 10]
 
 ## Evidência 11 — Conflito dentro de Pull Request (Aluno B)
 
-**O que comprova:** captura do aviso de conflito antes e do mesmo PR integrado depois.
+**O que comprova:** o mesmo PR mostrando o aviso de conflito antes e o estado Merged depois.
 
 [INSERIR CAPTURA REAL 11 — ANTES]
 
 [INSERIR CAPTURA REAL 11 — DEPOIS]
 
-## Evidência 12 — Histórico e página final (ambos)
+## Evidência 12a — Histórico final (ambos)
 
-**O que comprova:** `git log --oneline --graph --all` final e página com o menu completo.
+**O que comprova:** saída final de `git log --oneline --graph --all`.
 
-[INSERIR CAPTURA REAL 12a — HISTÓRICO]
+[INSERIR CAPTURA REAL 12a]
 
-[INSERIR CAPTURA REAL 12b — NAVEGADOR]
+## Evidência 12b — Página final (ambos)
+
+**O que comprova:** navegador mostrando o menu completo e a página após as alterações.
+
+[INSERIR CAPTURA REAL 12b]
 
 ---
 
-## Revisão antes da entrega
+## Conferência antes da entrega
 
-- [ ] Todos os espaços foram substituídos por capturas reais.
-- [ ] Cada imagem está legível e numerada.
+- [ ] Todas as capturas são reais, legíveis e numeradas.
 - [ ] O usuário conectado e a data/hora do sistema aparecem quando exigido.
-- [ ] Os nomes dos dois participantes estão corretos.
-- [ ] O documento foi exportado para PDF como `SCM_<NomeCompleto>.pdf`.
-- [ ] Não há telas simuladas apresentadas como execução real.
+- [ ] O convite de colaborador foi aceito por @milla444.
+- [ ] O comentário e a aprovação da revisão foram feitos de verdade por Milla.
+- [ ] O documento foi exportado como `SCM_Kauan_Borges_Duarte.pdf`.
+- [ ] As evidências foram revisadas antes do envio.
