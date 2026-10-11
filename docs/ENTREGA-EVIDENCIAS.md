@@ -1,7 +1,7 @@
 # Gestão de Código-Fonte — Documento de evidências
 
-**Aluno A:** Kauan Borges Duarte  
-**Aluno B:** Milla (GitHub: [@milla444](https://github.com/milla444))  
+**Aluno 1 - ** Kauan Borges Duarte  
+**Aluno 2 - ** Milla (GitHub: [@milla444](https://github.com/milla444))  
 **Repositório de trabalho:** https://github.com/kbDuarte/git-tp  
 **Roteiro do laboratório:** https://github.com/EngenhariaSoftwareAtual/gestao-codigo-fonte  
 Engenharia de Software
