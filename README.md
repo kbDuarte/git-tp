@@ -16,8 +16,3 @@ Fiz uma página simples com HTML, CSS e JavaScript para praticar as mudanças pe
 
 É só abrir o arquivo `index.html` no navegador. Não precisa instalar nada para ver a página.
 
-## Atividade
-
-O roteiro usado como referência é o [laboratório de Gestão de Código-Fonte](https://github.com/EngenhariaSoftwareAtual/gestao-codigo-fonte).
-
-As capturas e etapas que ainda faltam executar estão anotadas em `docs/PLANO-DE-EVIDENCIAS.md`. Não marquei como concluídas as partes que dependem de ações locais ou da participação de outra pessoa.
