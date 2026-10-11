@@ -1,12 +1,19 @@
 # Roteiro para terminar a atividade
 
-Repositório atual: https://github.com/kbDuarte/git-tp
+Repositório de trabalho atual: https://github.com/kbDuarte/git-tp  
+Aluno A: Kauan Borges Duarte  
+Aluno B: Milla — GitHub: https://github.com/milla444  
+Roteiro de referência: https://github.com/EngenhariaSoftwareAtual/gestao-codigo-fonte
 
-Este roteiro organiza o que falta executar. Faça os passos na ordem e só registre como concluído depois de verificar o resultado. Os comandos abaixo são para executar no seu computador, no terminal do VS Code.
+Este documento organiza o que falta executar. Siga as etapas no computador e só marque como concluída depois de verificar o resultado. As capturas precisam mostrar a execução real; não copie saídas de exemplo para usar como prova.
+
+## 0. Confirmar o repositório correto
+
+O roteiro do professor pede que o Aluno A faça um fork do repositório modelo `EngenhariaSoftwareAtual/scm-modelo`, convide o Aluno B e que ambos trabalhem nesse repositório compartilhado. O repositório atual `kbDuarte/git-tp` é o repositório de trabalho já preparado, mas confirme se ele satisfaz a exigência de fork. Se o professor exige o fork literal, será necessário criar o fork correto e repetir/aplicar nele as mudanças.
 
 ## 1. Preparar o computador
 
-Confira as ferramentas:
+No terminal do VS Code, confira:
 
 ```bash
 git --version
@@ -14,19 +21,23 @@ git config user.name
 git config user.email
 ```
 
-Configure nome/e-mail localmente dentro do repositório se ainda não estiverem configurados:
+Configure nome e e-mail localmente dentro do repositório, se necessário:
 
 ```bash
-git config user.name "Seu nome completo"
+git config user.name "Kauan Borges Duarte"
 git config user.email "seu-email-cadastrado-no-GitHub"
 git config pull.rebase false
 ```
 
-Use o e-mail associado à sua conta GitHub. Não compartilhe tokens nem senhas em prints.
+Use o e-mail associado à sua conta GitHub. Não mostre tokens nem senhas nos prints.
 
-## 2. Clonar e conferir o remoto
+## 2. Convidar Milla como colaboradora
 
-Escolha uma pasta onde possa guardar o projeto. Se ainda não houver clone, execute:
+No repositório que será entregue, abra **Settings → Collaborators → Add people**, pesquise `milla444` e envie o convite. Milla precisa aceitar o convite pela conta dela. Depois tire a captura da lista de colaboradores com a conta dela visível. O arquivo de evidências não substitui o convite real.
+
+## 3. Clonar e conferir o remoto
+
+Se ainda não houver clone local:
 
 ```bash
 git clone https://github.com/kbDuarte/git-tp.git
@@ -35,11 +46,11 @@ git remote -v
 git status
 ```
 
-Se a pasta já estiver clonada, entre nela e execute apenas os três últimos comandos. Não tente clonar por cima de uma pasta existente.
+Se a pasta já estiver clonada, entre nela e execute apenas os três últimos comandos. Não clone por cima de uma pasta existente. Se o fork correto do professor for criado, use a URL desse fork no lugar da URL acima.
 
-## 3. Registrar o primeiro ciclo local
+## 4. Registrar uma alteração local
 
-Abra o projeto no VS Code e altere uma frase simples no `index.html`, por exemplo o texto de apresentação. Depois:
+Abra o projeto no VS Code e faça uma pequena alteração útil no `index.html`. Depois:
 
 ```bash
 git status
@@ -50,11 +61,9 @@ git push origin main
 git log --oneline -5
 ```
 
-Se a alteração não fizer sentido para o trabalho, edite um texto real que você queira manter. Não faça commits vazios apenas para produzir print.
+Use uma alteração que você queira manter. Não faça commits vazios só para produzir uma captura.
 
-## 4. Praticar fetch e pull
-
-Primeiro, registre o estado atual e busque as referências do GitHub:
+## 5. Demonstrar fetch e pull
 
 ```bash
 git fetch origin
@@ -62,30 +71,29 @@ git status
 git log --oneline --graph --all -10
 ```
 
-Para demonstrar `git pull` com uma atualização de verdade, faça uma alteração simples no GitHub (ou peça ao colega para fazer uma alteração combinada), depois rode:
+Para demonstrar o recebimento de uma atualização, combine com Milla que ela faça uma alteração real e envie para a branch compartilhada; depois execute:
 
 ```bash
 git pull origin main
 git status
 ```
 
-Se não houver novos commits remotos, o pull pode informar que já está atualizado; isso é válido como comando executado, mas não demonstra recebimento de uma mudança nova. Combine a etapa com o colega conforme o roteiro.
+Se não houver novos commits remotos, o pull pode informar que a branch já está atualizada. Isso registra o comando, mas não demonstra uma nova alteração recebida.
 
-## 5. Merge automático entre duas alterações
+## 6. Demonstrar merge automático
 
-Esta etapa depende de dois históricos que avancem separadamente. Combine com o colega quem altera qual arquivo. Faça commit e push em uma mudança; no outro clone, faça outra mudança sem tocar nas mesmas linhas. Em seguida:
+Combine com Milla para que duas alterações diferentes sejam feitas em paralelo sem editar as mesmas linhas. Depois busque as referências e integre conforme o roteiro do laboratório:
 
 ```bash
 git fetch origin
-git pull origin main
 git log --oneline --graph --all
 ```
 
-Se a sequência do professor exigir um merge local entre branches, crie/atualize a branch de trabalho e use `git merge <branch>` somente depois de confirmar qual branch contém a alteração que você quer integrar.
+Se for preciso integrar uma branch local, confirme qual branch contém a alteração antes de usar `git merge <nome-da-branch>`. Ao final, registre o histórico com bifurcação e commit de merge.
 
-## 6. Reproduzir e resolver o conflito de CSS
+## 7. Criar e resolver um conflito de CSS
 
-Faça isso numa branch de teste, nunca direto na `main`. Antes de começar:
+Faça isso numa branch de teste, nunca diretamente na `main`. Antes:
 
 ```bash
 git status
@@ -94,9 +102,9 @@ git pull origin main
 git switch -c teste/conflito-css
 ```
 
-Combine com o colega para que duas alterações diferentes atinjam a mesma linha de `style.css`. Registre e envie a primeira mudança; na outra branch/clone, altere a mesma linha de outro jeito e tente integrar os históricos. Quando o Git mostrar conflito, abra `style.css` no VS Code, escolha conscientemente o estilo final e remova os marcadores `<<<<<<<`, `=======` e `>>>>>>>`.
+Combine com Milla para que duas alterações diferentes atinjam a mesma linha de `style.css`. Depois que os históricos divergirem, tente integrar a outra branch. Quando o Git apontar conflito, abra o arquivo e decida qual estilo final manter. Apague os marcadores `<<<<<<<`, `=======` e `>>>>>>>`.
 
-Depois da resolução:
+Depois de conferir o resultado:
 
 ```bash
 git status
@@ -106,28 +114,27 @@ git commit -m "Resolve conflito de estilos"
 git push -u origin teste/conflito-css
 ```
 
-Os comandos exatos para iniciar o conflito dependem de qual pessoa enviou primeiro e de como as branches estão relacionadas. Se surgir uma mensagem diferente, pare e confira `git status` antes de executar mais comandos. Não copie uma saída fictícia para a entrega.
+Os comandos exatos para provocar o conflito dependem da ordem das alterações. Se a saída for diferente, pare e confira `git status` antes de continuar.
 
-## 7. Branches, Pull Request e revisão
+## 8. Branch, Pull Request e revisão real
 
-- Crie a branch de funcionalidade a partir da `main` atual.
-- Faça uma mudança pequena e real, registre com commit e envie com `git push -u origin nome-da-branch`.
-- Abra um Pull Request da branch de funcionalidade para `main`.
-- Peça ao colega que leia a aba **Files changed**, deixe um comentário real e aprove (ou solicite ajustes).
-- Responda ao comentário e integre o PR só depois da revisão.
-- Atualize o clone com `git switch main` e `git pull origin main`.
+- Crie uma branch a partir da `main` atual.
+- Faça uma alteração pequena, commit e push.
+- Abra um PR para `main`.
+- Solicite revisão de Milla.
+- Milla deve ler **Files changed**, deixar um comentário específico e aprovar (ou pedir ajustes).
+- Responda ao comentário e integre o PR depois da revisão.
+- Atualize a cópia local com `git switch main` e `git pull origin main`.
 
-Não simule o usuário do colega nem faça aprovação em nome dele. Se não houver uma dupla disponível, confirme com o docente como comprovar essa parte individualmente.
+Não simule o usuário da colega nem faça aprovação em nome dela.
 
-## 8. PR com conflito
+## 9. PR com conflito
 
-O roteiro exige um PR que mostre conflito antes e o mesmo PR integrado depois. Para isso, duas branches precisam editar a mesma região de `index.html) e uma delas precisa entrar na `main` primeiro. A outra branch ficará divergente; abra o PR, registre a tela do aviso e resolva o conflito na branch proposta. Faça push, confira que o aviso sumiu, passe pela revisão e integre o PR.
+Para mostrar o conflito antes e a resolução depois no mesmo PR, duas branches precisam alterar a mesma região de `index.html`; uma delas entra primeiro na `main`, e a outra fica divergente. Abra o PR da segunda branch, capture o aviso de conflito, resolva o conflito na branch proposta, faça push e confira que o aviso desapareceu. Depois da revisão real, integre o PR e registre a tela final.
 
-Os PRs antigos deste repositório mostram tentativas anteriores, mas não garantem que a sequência exigida pelo roteiro esteja comprovada. Confira o estado real antes de usar uma tela como evidência.
+## 10. Testar git revert
 
-## 9. Testar git revert
-
-Escolha um commit recente de alteração simples que já esteja enviado ao GitHub. Anote o hash com `git log --oneline` e reverta o commit:
+Escolha um commit recente de uma alteração simples que já foi enviada ao GitHub. Anote o hash real:
 
 ```bash
 git log --oneline -10
@@ -136,9 +143,9 @@ git push origin main
 git log --oneline -5
 ```
 
-Substitua o texto entre sinais de menor/maior pelo hash real. Leia a mensagem antes de confirmar. Se abrir o editor de commit, salve e feche para concluir. O revert cria um commit novo que desfaz a mudança selecionada; não apaga o commit antigo.
+Substitua o texto entre sinais de menor/maior pelo hash real. O `revert` cria um novo commit que desfaz a mudança selecionada sem apagar o commit anterior. Confira cuidadosamente o que será revertido antes de confirmar.
 
-## 10. Conferência final
+## 11. Conferência final
 
 ```bash
 git switch main
@@ -147,6 +154,6 @@ git status
 git log --oneline --graph --all
 ```
 
-Abra `index.html` no navegador e confira menu, seções e estilo. Tire as capturas com o relógio do sistema visível e salve-as na pasta `evidencias/` com os nomes indicados no documento de entrega.
+Abra `index.html` no navegador e confira a página. Salve as capturas reais na pasta `evidencias/`, usando a numeração de `docs/PLANO-DE-EVIDENCIAS.md`. Preencha `docs/ENTREGA-EVIDENCIAS.md` e exporte o documento individual como `SCM_Kauan_Borges_Duarte.pdf`.
 
-**Atenção:** o roteiro do docente descreve um trabalho em dupla e exige fork do repositório modelo, convite de colaborador e revisão real. O repositório `git-tp` pode servir de base de trabalho, mas confirme o requisito do fork antes de considerar essas etapas cumpridas.
+**Atenção:** a atividade exige colaboração e revisão reais. Os documentos deixam a entrega organizada, mas as etapas locais, o convite/aceite, o conflito, o revert e as capturas precisam ser executados.
