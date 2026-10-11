@@ -33,9 +33,16 @@ Abra `index.html` diretamente no navegador. Não há dependências de build; a f
 6. Revise as alterações, registre comentários reais e só então integre.
 7. Use `git revert` para desfazer mudanças já compartilhadas.
 
+## Pull Requests e histórico do exercício
+
+- [PR #1 — Adiciona seção Sobre](https://github.com/kbDuarte/git-tp/pull/1) — merged.
+- [PR #2 — Adiciona link Sobre ao menu](https://github.com/kbDuarte/git-tp/pull/2) — merged.
+- [PR #3 — Tentativa com branch desatualizada](https://github.com/kbDuarte/git-tp/pull/3) — fechado sem merge após identificar conflitos.
+- [PR #4 — Adiciona seção Contato](https://github.com/kbDuarte/git-tp/pull/4) — merged após reaplicar a alteração sobre a `main` atual.
+
 ## Estado das evidências
 
-O plano está em [docs/PLANO-DE-EVIDENCIAS.md](docs/PLANO-DE-EVIDENCIAS.md). As capturas precisam ser feitas a partir das telas reais após cada etapa. Não há capturas anexadas neste commit, portanto nenhuma etapa dependente de ações de dupla é declarada como comprovada.
+O plano está em [docs/PLANO-DE-EVIDENCIAS.md](docs/PLANO-DE-EVIDENCIAS.md) e o registro de execução em [docs/REGISTRO-DE-EXECUCAO.md](docs/REGISTRO-DE-EXECUCAO.md). As capturas precisam ser feitas a partir das telas reais após cada etapa. Nenhuma captura foi anexada automaticamente; ações de dupla e revisões por colega continuam pendentes de execução real.
 
 ## Limitações importantes
 
